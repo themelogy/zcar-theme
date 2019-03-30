@@ -1,0 +1,279 @@
+$post-title: darken(white, 75%);
+.section-blog {
+  article {
+    margin-bottom: 10px;
+    .post {
+      .post-header {
+        img {
+          width: 100%;
+        }
+        .img-hover {
+          z-index: 1;
+          display: block;
+          position: relative;
+          transition: .3s;
+          overflow: hidden;
+          img {
+            transition: 4s;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+          }
+          .hover-icon {
+            background: rgba($accent_color_black, .5);
+            color: #fff;
+            padding: 5px;
+            border-radius: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,50%,0);
+            display: block;
+            transition: .3s;
+            position: absolute;
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+          }
+          &:hover {
+            > img {
+              opacity: .7;
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+              filter: alpha(opacity=70);
+              transform: scale(1.2);
+            }
+            opacity: 1;
+            -ms-filter: none;
+            -webkit-filter: none;
+            filter: none;
+            transform: translate(0,0);
+            .hover-icon {
+              opacity: 1;
+              -ms-filter: none;
+              -webkit-filter: none;
+              filter: none;
+              transform: translate(0,0);
+            }
+          }
+        }
+      }
+      .post-inner {
+        .title {
+          font-size: 1em;
+          a {
+            color: $post-title;
+          }
+        }
+        .post-meta {
+          list-style: none;
+          margin: 0 0 5px 0;
+          padding: 0 0 5px 0;
+          border-bottom: 1px dashed #e6e6e6;
+          display: table;
+          li {
+            display: inline-block;
+            margin-right: 15px;
+            a {
+              font-size: 10px;
+              color: #737373;
+            }
+            .fa {
+              font-size: 11px;
+              margin-right: 3px;
+              color: $post-title;
+            }
+          }
+        }
+        .description {
+          font-size: .85em;
+        }
+      }
+    }
+  }
+  .sidebar-left {
+    @media screen and (min-width: 768px) {
+      border-right: 1px solid #ebebeb;
+      padding-right: 20px;
+    }
+  }
+  .sidebar-right {
+    @media screen and (min-width: 768px) {
+      border-left: 1px solid #ebebeb;
+      padding-left: 20px;
+    }
+  }
+  .sidebar-widget {
+    margin-bottom: 20px;
+    .title {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+      list-style-position: inside;
+      padding: 0;
+    }
+    &.category {
+      a {
+        i {
+          margin-right: 10px;
+          color: $post-title;
+        }
+        color: darken(white, 75%);
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+        display: block;
+        border-bottom: 1px dashed #f2f2f2;
+        &:hover {
+          color: #ed8323;
+        }
+      }
+    }
+    .thumb-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li {
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+        border-bottom: 1px dashed #e6e6e6;
+        overflow: hidden;
+        img {
+          float: left;
+          width: 50px;
+          margin-right: 10px;
+        }
+        .thumb-list-item-caption {
+          display: table;
+          .icon-list-rating {
+            font-size: 9px;
+            color: #f19c4f;
+            margin-bottom: -3px;
+            &.icon-list-non-rated {
+              color: #8f8f8f !important;
+            }
+          }
+          .thumb-list-item-title {
+            font-size: 13px;
+            margin-bottom: 3px;
+            margin-top: 2px;
+            a {
+              color: #686868;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+          .thumb-list-item-desciption {
+            font-size: 11px;
+            margin: 0;
+            color: #969696;
+            line-height: 1.4em;
+          }
+          .thumb-list-item-meta {
+            margin-bottom: 2px;
+            line-height: 1em;
+            font-size: 9px;
+            color: #8f8f8f;
+            font-style: italic;
+          }
+          .thumb-list-item-price {
+            font-size: 16px;
+            color: #818181;
+            margin-bottom: 0;
+          }
+          .thumb-list-item-author {
+            font-size: 11px;
+            color: #8f8f8f;
+            font-style: italic;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border: none;
+        }
+      }
+      .thumb-list-item-title {
+        margin-top: 0 !important;
+      }
+      &.thumb-list-right > li img {
+        float: right;
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+    &.tag {
+      .badge {
+        font-size: .7em;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .post {
+    margin-bottom: 20px;
+    //overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    .post-header {
+      blockquote {
+        padding: 40px;
+        font-size: 30px;
+        padding-left: 60px;
+        margin: 0;
+        font-weight: 400;
+        background: #f5f5f5;
+        line-height: 1.4em;
+        font-style: italic;
+        color: #686868;
+        &:before {
+          top: 10px;
+          left: 10px;
+        }
+      }
+      .post-link {
+        padding: 30px 15px;
+        font-size: 50px;
+        font-weight: bold;
+        display: block;
+        background: #ed8323;
+        color: #fff;
+        &:hover {
+          background: #d66f11;
+          color: #fff;
+        }
+      }
+    }
+    .post-inner {
+      padding: 5px 0;
+    }
+    .title {
+      margin: 10px 0 5px 0;
+      font-size: 1em;
+      a {
+        color: $post-title;
+      }
+    }
+    .description {
+      font-size: .9em;
+    }
+    .post-meta {
+      list-style: none;
+      margin: 0 0 5px 0;
+      padding: 0 0 5px 0;
+      border-bottom: 1px dashed #e6e6e6;
+      li {
+        display: inline-block;
+        margin-right: 15px;
+        a {
+          font-size: 10px;
+          font-style: italic;
+          color: #737373;
+        }
+        .fa {
+          margin-right: 3px;
+          color: #b2b2b2;
+        }
+      }
+    }
+  }
+}

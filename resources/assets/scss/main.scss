@@ -1,0 +1,46 @@
+@import "fonts/font-awesome";
+@import "fonts/simple-line-icons";
+@import "bootstrap/bootstrap";
+@import "../css/plugins/owl/owl.carousel.min.css";
+@import "../css/plugins/owl/owl.theme.default.min.css";
+@import "plugin/lightcase/lightcase.scss";
+@import "mixins";
+@import "custom_variables";
+@import "header";
+@import "footer";
+@import "slider";
+@import "about";
+@import "gallery";
+@import "services";
+@import "contact";
+@import "common";
+@import "faq";
+@import "best-vehicles";
+@import "drivers";
+@import "latest-news";
+@import "car-listing";
+@import "car-booking";
+@import "testimonial";
+@import "login-register";
+@import "map";
+@import "color";
+@import "components/datepicker";
+@import "components/booking";
+@import "blog";
+@import "custom";
+
+
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-selection--single {
+  height: 45px !important;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  .select2-selection__rendered, .select2-selection__arrow {
+    line-height: 42px !important;
+    height: 45px !important;
+    width: 100%;
+  }
+}
